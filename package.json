@@ -1,0 +1,52 @@
+{
+  "name": "material-ui-responsive-menu",
+  "version": "1.0.19",
+  "description": "material-ui-responsive-menu React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && npm clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "15.x",
+    "material-ui": "^0.17.1",
+    "react-measure": "^1.4.6",
+    "react-redux": "^5.0.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-visibility-sensor": "^3.7.0",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "nwb": "0.15.x",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "author": "Tarik Huber <huber.tarik@gmail.com> (https://github.com/TarikHuber)",
+  "homepage": "https://github.com/TarikHuber/material-ui-responsive-menu#readme",
+  "license": "MIT",
+  "keywords": [
+    "react-component"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TarikHuber/material-ui-responsive-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TarikHuber/material-ui-responsive-menu/issues"
+  }
+}
