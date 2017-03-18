@@ -12,7 +12,7 @@ const styles={
     justifyContent:'flex-end',
     margin: 0,
     padding: 0,
-    overflow: 'hidden'
+    //overflow: 'hidden'
   }
 }
 
@@ -53,10 +53,11 @@ class ResponsiveMenu extends Component {
 
     const { menuList, iconWidth, marginCorrection } = props;
 
+    const itemsCount=menuList.filter((item)=>!item.hidden).length;
     const dimensions=this.state.dimensions;
     const iconW=iconWidth!==undefined?iconWidth:48;
     const correction=marginCorrection!==undefined?marginCorrection:0;
-    const breackLimit=menuList.length*iconW;
+    const breackLimit=itemsCount*iconW;
 
     const hiddenWidth=breackLimit-dimensions.width-correction;
     const hiddenIcons=Math.ceil(hiddenWidth/iconW)+1;
@@ -97,7 +98,8 @@ class ResponsiveMenu extends Component {
       <Measure
         includeMargin={false}
         onMeasure={this.handleWidthChange}
-        whitelist={['width']}>
+        whitelist={['width']}
+        blacklist={['height', 'top', 'right', 'bottom', 'left']}>
 
         <div style={styles.menu_container}>
 
