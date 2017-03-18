@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import IconButton from 'material-ui/IconButton/IconButton';
 import ListMenu from './ListMenu.js'
-import VisibilitySensor from 'react-visibility-sensor';
 import Measure from 'react-measure';
 
 const styles={
@@ -44,31 +43,22 @@ class ResponsiveMenu extends Component {
 
   componentWillReceiveProps(nextProps){
 
-    this.updateLists(nextProps);
-
-    /*
-    const { menuList} = this.props;
-
-    const nextMenuList=nextProps.menuList;
-
-    if(!this.arraysContainSame(menuList, nextMenuList)){
-      this.updateLists();
+    if(nextProps!==undefined && !this.arraysContainSame(this.props.menuList, nextProps.menuList)){
+      this.updateLists(nextProps);
     }
-    */
 
   }
 
   updateLists = (props) => {
 
-    const { menuList, iconWidth} = props;
+    const { menuList, iconWidth, marginCorrection } = props;
 
     const dimensions=this.state.dimensions;
     const iconW=iconWidth!==undefined?iconWidth:48;
+    const correction=marginCorrection!==undefined?marginCorrection:0;
     const breackLimit=menuList.length*iconW;
 
-    console.log(dimensions);
-
-    const hiddenWidth=breackLimit-dimensions.width;
+    const hiddenWidth=breackLimit-dimensions.width-correction;
     const hiddenIcons=Math.ceil(hiddenWidth/iconW)+1;
 
     if(hiddenIcons > 0){
@@ -99,11 +89,13 @@ class ResponsiveMenu extends Component {
 
 
   render() {
+    const { iconMenuColor } = this.props;
     const iconList=this.state.iconList;
     const menuList=this.state.menuList;
 
     return (
       <Measure
+        includeMargin={false}
         onMeasure={this.handleWidthChange}
         whitelist={['width']}>
 
@@ -114,7 +106,7 @@ class ResponsiveMenu extends Component {
           {menuList.length!=0 &&
             <ListMenu
               items={menuList.filter((item)=>!item.hidden)}
-              secondary={false}
+              iconMenuColor={iconMenuColor}
             />
           }
 
@@ -129,6 +121,8 @@ class ResponsiveMenu extends Component {
 ResponsiveMenu.propTypes = {
   menuList: PropTypes.array.isRequired,
   iconWidth: PropTypes.number,
+  marginCorrection: PropTypes.number,
+  iconMenuColor: PropTypes.string,
 };
 
 export default ResponsiveMenu;

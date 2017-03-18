@@ -1,6 +1,6 @@
 {
   "name": "material-ui-responsive-menu",
-  "version": "1.0.19",
+  "version": "1.0.24",
   "description": "material-ui-responsive-menu React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -25,7 +25,6 @@
     "react-measure": "^1.4.6",
     "react-redux": "^5.0.3",
     "react-tap-event-plugin": "^2.0.1",
-    "react-visibility-sensor": "^3.7.0",
     "redux": "^3.6.0"
   },
   "devDependencies": {

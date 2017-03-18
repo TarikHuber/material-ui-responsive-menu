@@ -73,8 +73,8 @@ class App extends Component {
           zDepth={1}
           iconElementLeft={<IconButton><NavigationClose /></IconButton>}
           iconElementRight={
-            <div style={{paddingRight:'245px'}}>
-              <ResponsiveMenu menuList={menuList}/>
+            <div style={{paddingRight:'256px'}}>
+              <ResponsiveMenu menuList={menuList} marginCorrection={256}/>
             </div>
           }
           iconStyleRight={{width:'50%'}}

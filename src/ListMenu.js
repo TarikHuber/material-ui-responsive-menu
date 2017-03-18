@@ -8,13 +8,13 @@ class ListMenu extends Component{
 
 	render(){
 
-		const {  items } = this.props
+		const {  items, iconMenuColor } = this.props
 
 		return (
 			<IconMenu
 				iconButtonElement={
 					<IconButton>
-						<MoreVertIcon />
+						<MoreVertIcon color={iconMenuColor!==undefined?iconMenuColor:undefined}/>
 					</IconButton>
 				}>
 				{items.map(item =>
@@ -32,6 +32,7 @@ class ListMenu extends Component{
 
 ListMenu.propTypes = {
 	items: PropTypes.array.isRequired,
+	iconMenuColor: PropTypes.string,
 }
 
 export default (ListMenu);
