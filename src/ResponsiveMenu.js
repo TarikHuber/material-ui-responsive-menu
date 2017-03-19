@@ -31,9 +31,15 @@ class ResponsiveMenu extends Component {
     return a.length === b.length && a.every(el => b.includes(el));
   }
 
-  componentWillMount(){
+  componentDidMount(){
     const { menuList} = this.props;
     this.setState({initList: menuList});
+    const dimensions ={width: this.refs.menuContainer.offsetWidth};
+    this.setState({dimensions});
+    this.updateLists(this.props);
+
+    //var width = this.refs.menuContainer.offsetWidth;
+    //console.log(dimensions);
   }
 
   handleWidthChange = (dimensions) => {
@@ -101,7 +107,7 @@ class ResponsiveMenu extends Component {
         whitelist={['width']}
         blacklist={['height', 'top', 'right', 'bottom', 'left']}>
 
-        <div style={styles.menu_container}>
+        <div style={styles.menu_container} ref="menuContainer">
 
           {iconList.filter((item)=>!item.hidden).map(item =>this.getIcon(item))}
 

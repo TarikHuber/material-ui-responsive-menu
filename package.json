@@ -1,6 +1,6 @@
 {
   "name": "material-ui-responsive-menu",
-  "version": "1.0.29",
+  "version": "1.0.34",
   "description": "material-ui-responsive-menu React component",
   "main": "lib/index.js",
   "module": "es/index.js",
