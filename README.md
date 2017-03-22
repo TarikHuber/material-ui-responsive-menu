@@ -1,4 +1,4 @@
-# Material-UI responsive Drawer
+# Material-UI responsive Menu
 
 ## Table of Contents
 
