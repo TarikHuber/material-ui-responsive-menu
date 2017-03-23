@@ -46,29 +46,30 @@ class ResponsiveMenu extends Component {
 
     const { menuList, iconWidth, marginCorrection } = props;
 
-    const itemsCount=menuList.filter((item)=>!item.hidden).length;
+    //const itemsCount=menuList.filter((item)=>item.hidden!==true).length;
+    const visibleItems=menuList.filter((item)=>item.hidden!==true);
     const width =this.menuContainer.offsetWidth;
     const iconW=iconWidth!==undefined?iconWidth:48;
     const correction=marginCorrection!==undefined?marginCorrection:0;
-    const breackLimit=itemsCount*iconW;
+    const breackLimit=visibleItems.length*iconW;
 
     const hiddenWidth=breackLimit-width-correction;
     const hiddenIcons=Math.ceil(hiddenWidth/iconW)+1;
 
     if(hiddenIcons > 0){
       this.setState({
-        menuList: menuList.slice(menuList.length-hiddenIcons, menuList.length),
-        iconList: menuList.slice(0, hiddenIcons*-1)
+        menuList: visibleItems.slice(visibleItems.length-hiddenIcons, visibleItems.length),
+        iconList: visibleItems.slice(0, hiddenIcons*-1)
       });
     }else{
       this.setState({
         menuList: [],
-        iconList: menuList
+        iconList: visibleItems
       });
     }
   }
 
-  getIcon = (item) => {
+  getIcon = (item, i) => {
     if(item.seperator){
       return undefined;
     }else if(item.menu){
@@ -76,7 +77,7 @@ class ResponsiveMenu extends Component {
 
     }else{
       return <IconButton
-        key={item.text}
+        key={i}
         disabled={item.disabled}
         onClick={item.onTouchTap}
         tooltip={item.tooltip}>
@@ -104,11 +105,11 @@ class ResponsiveMenu extends Component {
             this.menuContainer=container;
           }}>
 
-          {iconList.filter((item)=>!item.hidden).map(item =>this.getIcon(item))}
+          {iconList.map((item, i) =>this.getIcon(item, i))}
 
           {menuList.length!=0 &&
             <ListMenu
-              items={menuList.filter((item)=>!item.hidden)}
+              items={menuList}
               iconMenuColor={iconMenuColor}
             />
           }

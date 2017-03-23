@@ -17,9 +17,9 @@ class ListMenu extends Component{
 						<MoreVertIcon color={iconMenuColor!==undefined?iconMenuColor:undefined}/>
 					</IconButton>
 				}>
-				{items.map((item, index) =>
+				{items.map((item, i) =>
 					<MenuItem
-						key={index}
+						key={i}
 						disabled={item.disabled}
 						primaryText={item.text}
 						onTouchTap={item.onTouchTap}

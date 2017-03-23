@@ -18,6 +18,7 @@ class App extends Component {
         text: 'test1',
         icon: undefined,
         tooltip: 'test1',
+        hidden: false,
         icon: <ActionHome/>,
         onTouchTap: ()=>{console.log('test1')}
       },
@@ -25,43 +26,46 @@ class App extends Component {
         text: 'test2',
         icon: <ActionHome/>,
         tooltip:'test2',
+        hidden: undefined,
         onTouchTap: ()=>{console.log('test2')}
       },
       {
         text: 'test3',
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test3',
+        hidden: true,
+        onTouchTap: ()=>{console.log('test3')}
       },
       {
         text: 'test4',
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test4',
+        onTouchTap: ()=>{console.log('test4')}
       },
       {
         text: 'test5',
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test5',
+        onTouchTap: ()=>{console.log('test5')}
       },
       {
         text: 'test6',
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test6',
+        onTouchTap: ()=>{console.log('test6')}
       },
       {
         text: 'test7',
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test7',
+        onTouchTap: ()=>{console.log('test7')}
       },
       {
         text: 'test8',
+        hidden: true,
         icon: <ActionHome/>,
-        tooltip:'test2',
-        onTouchTap: ()=>{console.log('test2')}
+        tooltip:'test8',
+        onTouchTap: ()=>{console.log('test8')}
       },
     ]
 
