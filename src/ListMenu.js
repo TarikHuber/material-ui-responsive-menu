@@ -1,4 +1,5 @@
-import React, {  Component, PropTypes } from 'react';
+import React, {  Component } from 'react';
+import PropTypes from 'prop-types';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';

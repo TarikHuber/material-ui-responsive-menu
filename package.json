@@ -1,6 +1,6 @@
 {
   "name": "material-ui-responsive-menu",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "Material-UI responsive Menu is a React-Redux component that uses Material-UI to create a responsive IconMenu",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,8 +21,9 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "prop-types": "^15.5.10",
     "react": "15.x",
-    "material-ui": "^0.17.1",
+    "material-ui": "^0.18.6",
     "react-measure": "^1.4.6",
     "react-redux": "^5.0.3",
     "react-tap-event-plugin": "^2.0.1",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "nwb": "0.15.x",
+    "prop-types": "^15.5.10",
     "react": "^15.x",
     "react-dom": "^15.4.2",
     "material-ui": "^0.17.1",
