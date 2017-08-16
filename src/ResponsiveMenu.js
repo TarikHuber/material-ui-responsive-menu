@@ -25,7 +25,7 @@ const getIcon = (item, i) => {
     return <IconButton
       key={i}
       disabled={item.disabled}
-      onClick={item.onTouchTap}
+      onClick={item.onClick}
       tooltip={item.tooltip}>
       {item.icon}
     </IconButton>;

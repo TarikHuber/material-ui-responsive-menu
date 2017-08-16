@@ -23,7 +23,7 @@ class ListMenu extends Component{
 						key={i}
 						disabled={item.disabled}
 						primaryText={item.text}
-						onTouchTap={item.onTouchTap}
+						onClick={item.onClick}
 					/>
 				)}
 			</IconMenu>
