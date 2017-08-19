@@ -1,4 +1,9 @@
 # Material-UI responsive Menu
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![License][license-image]][license-url]
+[![Code Coverage][coverage-image]][coverage-url]
+[![Code Style][code-style-image]][code-style-url]
 
 ## Table of Contents
 
@@ -73,3 +78,14 @@ An complete example can be found in the [App.js](https://github.com/TarikHuber/m
 ## Contributing
 
 Every help no mather if it is a kritik, suggestion or pull request is welkome :)
+
+[travis-image]: https://travis-ci.org/TarikHuber/material-ui-responsive-menu.svg?branch=master
+[travis-url]: https://travis-ci.org/TarikHuber/material-ui-responsive-menu
+[daviddm-image]: https://img.shields.io/david/TarikHuber/material-ui-responsive-menu.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/TarikHuber/material-ui-responsive-menu
+[coverage-image]: https://img.shields.io/codecov/c/github/TarikHuber/material-ui-responsive-menu.svg?style=flat-square
+[coverage-url]: https://codecov.io/gh/TarikHuber/material-ui-responsive-menu
+[license-image]: https://img.shields.io/npm/l/express.svg
+[license-url]: https://github.com/TarikHuber/material-ui-responsive-menu/master/LICENSE
+[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[code-style-url]: http://standardjs.com/
