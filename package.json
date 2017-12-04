@@ -1,6 +1,6 @@
 {
   "name": "material-ui-responsive-menu",
-  "version": "1.19.2",
+  "version": "1.19.3",
   "description": "Material-UI responsive Menu is a React-Redux component that uses Material-UI to create a responsive IconMenu",
   "main": "lib/index.js",
   "module": "es/index.js",
