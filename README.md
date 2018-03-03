@@ -8,7 +8,7 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Installation](#instalaltion)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
